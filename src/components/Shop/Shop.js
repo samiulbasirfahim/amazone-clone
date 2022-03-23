@@ -14,7 +14,17 @@ const Shop = () => {
 	}, [])
 	const [cart, setCart] = useState([])
 	const addToCart = (product) => {
-		setCart([...cart, product])
+		const exist = cart.find((pd) => pd.id === product.id)
+		let newCart = []
+		if (!exist) {
+			product["quantity"] = 1
+			newCart = [...cart, product]
+		} else {
+			const rest = cart.filter((pd) => pd.id !== product.id)
+			product.quantity = product.quantity + 1
+			newCart = [...rest, product]
+		}
+		setCart(newCart)
 		addToDb(product.id)
 	}
 	useEffect(() => {
@@ -25,13 +35,9 @@ const Shop = () => {
 			if (match) {
 				const quantity = dataBase[id]
 				match.quantity = quantity
-				console.log(quantity)
-				for (let i = 0; i < quantity; i++) {
-					matchedItem.push(match)
-				}
+				matchedItem.push(match)
 			}
 		}
-		console.log(matchedItem)
 		setCart(matchedItem)
 	}, [products])
 
