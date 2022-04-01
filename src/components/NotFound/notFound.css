@@ -1,0 +1,19 @@
+.notFound {
+	height: 100vh;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .errorMsg {
+	color: #2a414f;
+} */
+.notFound h1 {
+	color: #2a414f;
+    font-size: 62px;
+    font-weight: 300;
+}
+
+.notFound h1 span{
+    color: #FF9900;
+    padding: 0px 15px;
+}

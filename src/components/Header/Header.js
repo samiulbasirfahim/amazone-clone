@@ -1,5 +1,6 @@
 import React from "react"
 import logo from "../../images/Logo.svg"
+import CustomLink from "../CustomLInk/CustomLink"
 import "./Header.css"
 
 const Header = () => {
@@ -12,13 +13,13 @@ const Header = () => {
 				<div>
 					<ul>
 						<li>
-							<a href="/order">Order</a>
+							<CustomLink  to={"/home"}>Home</CustomLink>
 						</li>
 						<li>
-							<a href="/review">Order review</a>
+							<CustomLink  to={"/review"}>Review</CustomLink>
 						</li>
 						<li>
-							<a href="/manage">Manage Inventory</a>
+							<CustomLink  to={"/manage"}>Manage Inventory</CustomLink>
 						</li>
 					</ul>
 				</div>

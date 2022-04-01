@@ -1,6 +1,7 @@
 import React from "react"
 import "./product.css"
 
+
 const Product = (props) => {
 	const { img, name, price, seller, ratings,id } =props.product
 	return (

@@ -4,6 +4,7 @@
 	height: 506px;
 	width: 300px;
 	position: relative;
+	margin: 60px;
 }
 .product img {
 	border-radius: 8px;
